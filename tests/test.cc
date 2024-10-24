@@ -14,20 +14,6 @@ int main(int argc, char** argv) {
 
 	file_appender->setLevel(anya::LogLevel::ERROR);
 
-	//anya::LogEvent::ptr event(
-	//	new anya::LogEvent(
-	//		__FILE__,	/* file */
-	//		__LINE__,	/* line */
-	//		0,			/* elapse */
-	//		anya::GetThreadId(),		/* thread_id */
-	//		anya::GetFiberId(),			/* fiber_id */
-	//		time(0)		/* time */
-	//	)
-	//);
-
-	//event->getSS() << "HELLO ANYA!";
-
-	//logger->log(anya::LogLevel::DEBUG, event);
 	std::cout << "hello anya log" << std::endl;
 	ANYA_LOG_INFO(logger) << "test macro";
 	ANYA_LOG_ERROR(logger) << "test macro error";
